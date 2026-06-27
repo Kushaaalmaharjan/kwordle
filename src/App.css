@@ -1,0 +1,78 @@
+.display{
+  height: 470px;
+  width: 460px;
+  background-color: rgba(47, 48, 58, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  border:#000000  1px solid;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+}
+
+.typing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.typing input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.typing input[type="submit"]::after {
+  content: '';
+}
+
+.typing input[type="submit"] {
+  padding: 10px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.display .row{
+  background-color: transparent;
+  height: 92px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  gap: 5px;
+}
+.display .row .box{
+  height: 80px;
+  width: 80px;
+  background-color: rgba(192, 132, 252, 0.15);
+  color:#f0f0f0;
+  font-weight: bold;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Courier New', Courier, monospace
+}
+
+.display .row .box.green {
+  background: #6aaa64;
+}
+
+.display .row .box.yellow {
+  background: goldenrod;
+}
+
+.display .row .box.gray {
+  background: #787c7e;
+}
