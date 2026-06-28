@@ -62,6 +62,8 @@ function App() {
     return colors
   }
 
+  console.log('Target Word:', targetWord) 
+
   return (
     <>
     <div className="Header">
@@ -69,8 +71,10 @@ function App() {
     </div>
 
     <section className="typing">
+      <form onSubmit={(e) => { e.preventDefault(); checkGuess(); }}>
       <input type="text" maxLength={5} className="guess-input" placeholder="Enter your guess" disabled={guesses.length >= 5} value={guess} onChange={(e) => setGuess(e.target.value.toUpperCase())}/>
-      <input type="submit" value="Submit" className= "guess-btn" id="guess-btn" disabled={guesses.length >= 5} onClick={checkGuess}/>
+      {/* <input type="submit" value="Submit" className= "guess-btn" id="guess-btn" disabled={guesses.length >= 5} onClick={checkGuess} /> */}
+      </form>
     </section>
 
     <section className="display" id="display">
